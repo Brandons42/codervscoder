@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-ReactDom.render(
+ReactDOM.render(
   <div>
     Hi
   </div>,
