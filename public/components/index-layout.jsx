@@ -1,6 +1,6 @@
 import React from 'react';
 
-import "../stylesheets/style.css";
+import "../stylesheets/style.scss";
 
 export default class IndexLayout extends React.Component {
   render() {

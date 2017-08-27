@@ -26722,7 +26722,7 @@ if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
 
-var options = {}
+var options = {"singleton":true,"localIdentName":"[path][name][local]"}
 options.transform = transform
 // add the styles to the DOM
 var update = __webpack_require__(206)(content, options);
@@ -26731,8 +26731,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js??ref--1-1!./style.css", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js??ref--1-1!./style.css");
+		module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./style.scss", function() {
+			var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./style.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -26747,15 +26747,13 @@ if(false) {
 
 exports = module.exports = __webpack_require__(205)(undefined);
 // imports
-exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Oswald:700);", ""]);
+
 
 // module
-exports.push([module.i, "html, body {\n  max-width: 100vw;\n  overflow-x: hidden;\n  margin: 0;\n}\n\ndiv#_1IP0OTASZLiorDh_BhlJ1K {\n  background-image: url(\"/images/smhs.jpg\");\n  background-size: cover;\n  width: 100vw;\n}\n\nh1 {\n  font-size: 300px;\n  color: orange;\n  font-family: 'Oswald', sans-serif;\n  margin: 0;\n}\n\nh1 span {\n  font-size: 150px;\n  color: white;\n  font-family: 'Oswald', sans-serif;\n}\n", ""]);
+exports.push([module.i, "html, body {\n  max-width: 100vw;\n  overflow-x: hidden;\n  margin: 0; }\n\n#title-container {\n  background-image: url(\"/images/smhs.jpg\");\n  background-size: cover;\n  width: 100vw; }\n  #title-container h1 {\n    font-size: 300px;\n    color: orange;\n    font-family: 'Oswald', sans-serif;\n    margin: 0; }\n    #title-container h1 span {\n      font-size: 150px;\n      color: white;\n      font-family: 'Oswald', sans-serif; }\n", ""]);
 
 // exports
-exports.locals = {
-	"title-container": "_1IP0OTASZLiorDh_BhlJ1K"
-};
+
 
 /***/ }),
 /* 205 */

@@ -1,6 +1,8 @@
 var path = require("path");
 var webpack = require("webpack");
 
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 module.exports = {
   entry: {
     jsx: [path.resolve(__dirname, "public/components/index.jsx"), path.resolve(__dirname, "public/components/index-layout.jsx")]
@@ -8,22 +10,26 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /.jsx$/,
-        exclude: /node_modules/,
+        test: /\.jsx$/,
+        exclude: /^node_modules$/,
         loader: "babel-loader"
       },
       {
-        test: /.css$/,
+        test: /\.scss$/,
         exclude: /node_modules/,
         use: [
           {
-            loader: "style-loader"
+            loader: "style-loader",
+            options: {
+              singleton: true,
+              localIdentName: "[path][name][local]"
+            }
           },
           {
-            loader: "css-loader",
-            options: {
-              modules: true
-            }
+            loader: "css-loader"
+          },
+          {
+            loader: "sass-loader"
           }
         ]
       }
