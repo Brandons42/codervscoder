@@ -10890,9 +10890,20 @@ var IndexLayout = function (_React$Component) {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
-        'h1',
-        null,
-        'Hi!'
+        'div',
+        {
+          id: "title-container"
+        },
+        _react2.default.createElement(
+          'h1',
+          null,
+          'SMHS',
+          _react2.default.createElement(
+            'span',
+            null,
+            'codervscoder'
+          )
+        )
       );
     }
   }]);

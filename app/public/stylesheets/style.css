@@ -1,8 +1,27 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css?family=Oswald:700');
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  position: relative;
+  margin: 0;
 }
 
-a {
-  color: #00B7FF;
+div#title-container {
+  background-image: url("/images/smhs.jpg");
+  background-size: cover;
+  width: 100vw;
+}
+
+h1 {
+  font-size: 300px;
+  color: orange;
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+}
+
+h1 span {
+  font-size: 150px;
+  color: white;
+  font-family: 'Oswald', sans-serif;
 }
