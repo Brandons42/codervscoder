@@ -5,7 +5,7 @@ import "../stylesheets/style.scss";
 export default class IndexLayout extends React.Component {
   render() {
     return pug`
-      div(id="title-container")
+      section(id="title-container", className="hero")
         h1 SMHS
           span codervscoder
     `;
