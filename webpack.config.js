@@ -3,7 +3,7 @@ var webpack = require("webpack");
 
 module.exports = {
   entry: {
-    jsx: path.resolve(__dirname, "public/components/index.jsx")
+    jsx: [path.resolve(__dirname, "public/components/index.jsx"), path.resolve(__dirname, "public/components/index-layout.jsx")]
   },
   module: {
     rules: [

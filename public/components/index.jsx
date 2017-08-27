@@ -1,9 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import IndexLayout from "./index-layout.jsx";
+
 ReactDOM.render(
-  <div>
-    Hi
-  </div>,
+  pug `
+    IndexLayout
+  `,
   document.getElementById("react")
 );
