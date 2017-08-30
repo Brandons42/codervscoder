@@ -1,5 +1,5 @@
-@import "node_modules/bulma/sass/utilities/_all.sass";
-@import "node_modules/bulma/sass/layout/_all.sass";
+@import "../node_modules/bulma/sass/utilities/_all.sass";
+@import "../node_modules/bulma/sass/layout/_all.sass";
 
 html, body {
   max-width: 100vw;
@@ -8,7 +8,7 @@ html, body {
 }
 
 #title-container {
-  background-image: url("/images/smhs.jpg");
+  background-image: url("../img/smhs.jpg");
   background-size: cover;
   position: fixed;
 

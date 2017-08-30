@@ -1,17 +1,25 @@
 var gulp = require("gulp");
 
-gulp.task("default", ["copy-public", "copy-routes", "copy-views"]);
+var sass = require("gulp-sass");
 
-gulp.task("copy-public", ["copy-img", "copy-js"]);
+gulp.task("default", ["copy-static", "copy-routes", "copy-views"]);
+
+gulp.task("copy-static", ["copy-img", "copy-js", "copy-styles"]);
 
 gulp.task("copy-img", function() {
-  gulp.src("public/images/**/*")
-    .pipe(gulp.dest("app/public/images"));
+  gulp.src("img/**/*")
+    .pipe(gulp.dest("app/img"));
 });
 
 gulp.task("copy-js", function() {
-  gulp.src("public/javascripts/**/*")
-    .pipe(gulp.dest("app/public/javascripts"));
+  gulp.src("js/**/*")
+    .pipe(gulp.dest("app/js"));
+});
+
+gulp.task("copy-styles", function() {
+  gulp.src("styles/**/*.scss")
+    .pipe(sass())
+    .pipe(gulp.dest("app/styles"))
 });
 
 gulp.task("copy-routes", function() {
