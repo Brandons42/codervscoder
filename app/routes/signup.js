@@ -3,11 +3,9 @@ var router = express.Router();
 
 /* GET home page. */
 router.get("/", function(req, res, next) {
-  res.render("index",
+  res.render("signup",
     {
-      title: "SMHS Coder vs Coder",
-      signedin: false,
-      username: null
+      title: "SMHS Coder vs Coder Sign Up"
     }
   );
 });

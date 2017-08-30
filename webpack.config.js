@@ -5,7 +5,7 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: {
-    jsx: [path.resolve(__dirname, "public/components/index.jsx"), path.resolve(__dirname, "public/components/index-layout.jsx")]
+    jsx: [path.resolve(__dirname, "public/components/index.jsx")]
   },
   module: {
     rules: [
