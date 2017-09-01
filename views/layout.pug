@@ -1,10 +1,53 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset="utf-8")
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
-    meta(name="viewport", content="width=device-width, initial-scale=1")
-    title= title
-    block metadata
-  body
-    block content
+extends skeleton
+
+block metadata
+  link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Oswald:700")
+  link(rel="stylesheet", href="/styles/style.css")
+
+block content
+  section(id="title-container", class="hero is-fullheight")
+    div(class="hero-head")
+    div(class="columns")
+      div(class="column is-offset-1 is-11")
+        h1(class="has-text-primary") SMHS
+          span(class="has-text-white-ter") codervscoder
+
+    div(class="columns")
+      div(class="column is-offset-2 is-two-thirds")
+        - if (signedin) {
+          p(class="subtitle has-text-white-ter")= "Nice to see you " + username + "!"
+        - }
+        - else {
+          a(href="/signup", class="button is-primary has-text-center") Sign Up
+        - }
+
+    div(class="columns")
+      div(id="terminal" class="column is-offset-1 is-one-third") $:
+      div(id="editor" class="column is-offset-2 is-one-third")
+        div(class="tabs is-boxed is-small")
+          ul
+            li(class="is-active")
+              p smhs.rb
+            li
+              p smhs.js
+            li
+              p SMHS.java
+            li
+              p
+    div(class="hero-footer")
+      p(class="has-text-white-ter") See what we're all about!
+      p(class="has-text-white-ter") |
+      p(class="has-text-white-ter") |
+      p(class="has-text-white-ter") V
+  section(id="main-content" class="section")
+    div(class="container")
+      div(class="columns")
+        aside(class="is-one-third")
+          block menu
+        div(class="content")
+          block routecontent
+  div(id="react")
+  footer(class="footer")
+    div(class="container")
+      div(class="content has-text-centered")
+        p Temporary footer placeholder text, yay!

@@ -1,18 +1,16 @@
 extends layout
 
-block metadata
-  link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Oswald:700")
-  link(rel="stylesheet", href="/styles/style.css")
-
-block content
-  section(id="title-container", className="hero")
-    h1 SMHS
-      span codervscoder
-    - if (signedin) {
-      p= "Nice to see you " + username
-    - }
-    - else {
-      a(href="/signup") Sign up
-    - }
-  div(id="react")
-  script(src="/components/index.js")
+block menu
+  p(class="menu-label") What's new?
+  ul(class="menu-list")
+    li
+      a(href="/" class="is-active") News and announcements
+    li
+      a(href="/calendar")
+  p(class="menu-label") Who we are
+  ul(class="menu-list")
+    li
+      a(href="/about-us") About us
+    li
+      a(href="/contact-us") Contact us
+block routecontent
