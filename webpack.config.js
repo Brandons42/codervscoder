@@ -5,7 +5,11 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
   entry: {
-    js: path.resolve(__dirname, "js/styles/js")
+    client: [
+              path.resolve(__dirname, "js/styles.js"),
+              path.resolve(__dirname, "js/change.js"),
+              path.resolve(__dirname, "js/signup.js")
+            ]
   },
   module: {
     rules: [
@@ -16,8 +20,7 @@ module.exports = {
           {
             loader: "style-loader",
             options: {
-              singleton: true,
-              localIdentName: "[path][name][local]"
+              singleton: true
             }
           },
           {
@@ -27,6 +30,28 @@ module.exports = {
             loader: "sass-loader"
           }
         ]
+      },
+      {
+        test: /\.js$/,
+        exclude: /^node_modules$/,
+        loader: "babel-loader"
+      },
+      {
+        test: /\.html$/,
+        exclude: /^node_modules$/,
+        loader: "raw-loader"
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+         'file-loader'
+        ]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          'file-loader'
+        ]
       }
     ]
   },
@@ -35,7 +60,7 @@ module.exports = {
     new webpack.optimize.ModuleConcatenationPlugin()
   ],
   output: {
-    filename: "index.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "app/js")
   }
 };

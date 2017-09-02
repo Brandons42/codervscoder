@@ -1,8 +1,6 @@
 extends skeleton
 
 block metadata
-  link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Oswald:700")
-  link(rel="stylesheet", href="/styles/style.css")
 
 block content
   section(id="title-container", class="hero is-fullheight")
@@ -18,7 +16,7 @@ block content
           p(class="subtitle has-text-white-ter")= "Nice to see you " + username + "!"
         - }
         - else {
-          a(href="/signup", class="button is-primary has-text-center") Sign Up
+          a(id="signup" class="button is-primary has-text-center") Sign Up
         - }
 
     div(class="columns")
@@ -39,6 +37,11 @@ block content
       p(class="has-text-white-ter") |
       p(class="has-text-white-ter") |
       p(class="has-text-white-ter") V
+  div(class="modal")
+    div(class="modal-background")
+    div(class="modal-content")
+      p Hi
+    div(class="modal-close", aria-label="close")
   section(id="main-content" class="section")
     div(class="container")
       div(class="columns")
@@ -46,8 +49,8 @@ block content
           block menu
         div(class="content")
           block routecontent
-  div(id="react")
   footer(class="footer")
     div(class="container")
       div(class="content has-text-centered")
         p Temporary footer placeholder text, yay!
+  script(src="/js/client.js")

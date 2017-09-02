@@ -1,19 +1,15 @@
 var gulp = require("gulp");
 
+var pug = require("gulp-pug");
 var sass = require("gulp-sass");
 
-gulp.task("default", ["copy-static", "copy-routes", "copy-views"]);
+gulp.task("default", ["copy-static", "copy-routes", "copy-views", "pug"]);
 
-gulp.task("copy-static", ["copy-img", "copy-js", "copy-styles"]);
+gulp.task("copy-static", ["copy-img", "copy-styles"]);
 
 gulp.task("copy-img", function() {
   gulp.src("img/**/*")
     .pipe(gulp.dest("app/img"));
-});
-
-gulp.task("copy-js", function() {
-  gulp.src("js/**/*")
-    .pipe(gulp.dest("app/js"));
 });
 
 gulp.task("copy-styles", function() {
@@ -28,6 +24,12 @@ gulp.task("copy-routes", function() {
 });
 
 gulp.task("copy-views", function() {
-  gulp.src("views/**/*")
+  gulp.src("views/**/!(about|caldendar|contact|index2).pug")
     .pipe(gulp.dest("app/views"));
+});
+
+gulp.task("pug", function() {
+  gulp.src("views/+(about|calendar|contact|index2).pug")
+    .pipe(pug())
+    .pipe(gulp.dest("./html"));
 });

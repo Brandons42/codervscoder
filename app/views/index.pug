@@ -4,13 +4,13 @@ block menu
   p(class="menu-label") What's new?
   ul(class="menu-list")
     li
-      a(href="/" class="is-active") News and announcements
+      a(class="is-active", data-name="root2") News and announcements
     li
-      a(href="/calendar")
+      a(data-name="calendar") Calendar
   p(class="menu-label") Who we are
   ul(class="menu-list")
     li
-      a(href="/about-us") About us
+      a(data-name="about") About us
     li
-      a(href="/contact-us") Contact us
+      a(data-name="contact") Contact us
 block routecontent

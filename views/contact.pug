@@ -1,10 +1,8 @@
-extends layout
-
-block menu
+aside(class="is-one-third")
   p(class="menu-label") What's new?
   ul(class="menu-list")
     li
-      a(class="is-active", data-name="root2") News and announcements
+      a(data-name="root2") News and announcements
     li
       a(data-name="calendar") Calendar
   p(class="menu-label") Who we are
@@ -12,5 +10,5 @@ block menu
     li
       a(data-name="about") About us
     li
-      a(data-name="contact") Contact us
-block routecontent
+      a(class="is-active", data-name="contact") Contact us
+div(class="content")
