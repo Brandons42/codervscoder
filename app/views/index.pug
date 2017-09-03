@@ -1,16 +1,15 @@
-extends layout
+extends skeleton
 
-block menu
-  p(class="menu-label") What's new?
-  ul(class="menu-list")
-    li
-      a(class="is-active", data-name="root2") News and announcements
-    li
-      a(data-name="calendar") Calendar
-  p(class="menu-label") Who we are
-  ul(class="menu-list")
-    li
-      a(data-name="about") About us
-    li
-      a(data-name="contact") Contact us
-block routecontent
+block metadata
+
+block content
+  include hero.pug
+  include signup.pug
+  section(class="section")
+    div(class="container")
+      div(class="columns")
+        include menu.pug
+        div(id="main-content", class="container")
+          include news.pug
+  include footer.pug
+  script(src="/js/client.js")

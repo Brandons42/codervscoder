@@ -2201,6 +2201,12 @@ graceful-fs@~1.2.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/graceful-readlink/-/graceful-readlink-1.0.1.tgz#4cafad76bc62f02fa039b2f94e9a3dd3a391a725"
 
+gulp-changed-in-place@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/gulp-changed-in-place/-/gulp-changed-in-place-2.2.0.tgz#1c2f5f568aba8b198fc6a2ffa2f8ee1421d4543c"
+  dependencies:
+    through2 "^2.0.0"
+
 gulp-pug@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/gulp-pug/-/gulp-pug-3.3.0.tgz#46982c1439c094c360542ed8ba5c882d3bb711cf"
@@ -2210,17 +2216,7 @@ gulp-pug@^3.3.0:
     pug ">=2.0.0-alpha <3"
     through2 "^2.0.0"
 
-gulp-sass@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/gulp-sass/-/gulp-sass-3.1.0.tgz#53dc4b68a1f5ddfe4424ab4c247655269a8b74b7"
-  dependencies:
-    gulp-util "^3.0"
-    lodash.clonedeep "^4.3.2"
-    node-sass "^4.2.0"
-    through2 "^2.0.0"
-    vinyl-sourcemaps-apply "^0.2.0"
-
-gulp-util@^3.0, gulp-util@^3.0.0, gulp-util@^3.0.2:
+gulp-util@^3.0.0, gulp-util@^3.0.2:
   version "3.0.8"
   resolved "https://registry.yarnpkg.com/gulp-util/-/gulp-util-3.0.8.tgz#0054e1e744502e27c04c187c3ecc505dd54bbb4f"
   dependencies:
@@ -3350,7 +3346,7 @@ node-pre-gyp@^0.6.36:
     tar "^2.2.1"
     tar-pack "^3.4.0"
 
-node-sass@^4.2.0, node-sass@^4.5.3:
+node-sass@^4.5.3:
   version "4.5.3"
   resolved "https://registry.yarnpkg.com/node-sass/-/node-sass-4.5.3.tgz#d09c9d1179641239d1b97ffc6231fdcec53e1568"
   dependencies:
@@ -4696,7 +4692,7 @@ source-map@0.4.x, source-map@^0.4.2:
   dependencies:
     amdefine ">=0.0.4"
 
-source-map@^0.5.1, source-map@^0.5.3, source-map@^0.5.6, source-map@^0.5.7, source-map@~0.5.1, source-map@~0.5.3:
+source-map@^0.5.3, source-map@^0.5.6, source-map@^0.5.7, source-map@~0.5.1, source-map@~0.5.3:
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/source-map/-/source-map-0.5.7.tgz#8a039d2d1021d22d1ea14c80d8ea468ba2ef3fcc"
 
@@ -5166,12 +5162,6 @@ vinyl-fs@^0.3.0:
     strip-bom "^1.0.0"
     through2 "^0.6.1"
     vinyl "^0.4.0"
-
-vinyl-sourcemaps-apply@^0.2.0:
-  version "0.2.1"
-  resolved "https://registry.yarnpkg.com/vinyl-sourcemaps-apply/-/vinyl-sourcemaps-apply-0.2.1.tgz#ab6549d61d172c2b1b87be5c508d239c8ef87705"
-  dependencies:
-    source-map "^0.5.1"
 
 vinyl@^0.4.0:
   version "0.4.6"

@@ -2,6 +2,7 @@
 @import "base";
 @import "../node_modules/bulma/sass/layout/_all.sass";
 @import "../node_modules/bulma/sass/elements/button.sass";
+@import "../node_modules/bulma/sass/elements/content.sass";
 @import "../node_modules/bulma/sass/elements/title.sass";
 @import "../node_modules/bulma/sass/grid/_all.sass";
 @import "../node_modules/bulma/sass/components/tabs.sass";
@@ -79,7 +80,7 @@ html, body {
   }
 }
 
-#main-content {
+section.section {
   margin-top: 100vh;
   background-color: $white-ter;
 

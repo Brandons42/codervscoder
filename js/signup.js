@@ -1,9 +1,7 @@
 const modal = document.querySelector(".modal");
 const button = document.getElementById("signup");
-console.log(modal);
-console.log(button);
+
 button.onclick = function(e) {
-  console.log("Hello!");
   e.preventDefault();
   modal.className += " is-active";
 };
