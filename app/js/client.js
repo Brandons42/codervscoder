@@ -704,6 +704,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var menu = document.querySelector("aside");
 var container = document.getElementById("main-content");
 var links = menu.getElementsByTagName("a");
+var last = links[0];
+var lastName = "news";
 var name = void 0;
 var files = {
   "about": _about2.default,
@@ -717,9 +719,13 @@ var files = {
 for (var q = 0; q < links.length; q++) {
   links[q].onclick = function (e) {
     e.preventDefault();
-    if (!(this.className === "is-active")) {
-      name = this.getAttribute("data-name");
+    name = this.getAttribute("data-name");
+    if (name != last) {
       container.innerHTML = files[name];
+      this.className = " is-active";
+      last.className = last;
+      last = this;
+      lastName = name;
     }
   };
 }
